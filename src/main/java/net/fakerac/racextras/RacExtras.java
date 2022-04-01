@@ -1,6 +1,7 @@
 package net.fakerac.racextras;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -16,6 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static net.fakerac.racextras.RacExtras.Blocks.*;
+import static net.minecraft.block.Blocks.BOOKSHELF;
 
 public class RacExtras implements ModInitializer {
 	public static final String MOD_ID = "racextras";
@@ -44,14 +46,14 @@ public class RacExtras implements ModInitializer {
 		// Definitions
 
 		// Bookshelves
-		public static final Block SPRUCE_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
-		public static final Block BIRCH_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
-		public static final Block JUNGLE_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
-		public static final Block ACACIA_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
-		public static final Block DARK_OAK_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
-		public static final Block CRIMSON_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
-		public static final Block WARPED_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
-		public static final Block MANGROVE_BOOKSHELF = new Block(FabricBlockSettings.of(Material.WOOD).strength(4.0f).sounds(BlockSoundGroup.WOOD));
+		public static final Block SPRUCE_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
+		public static final Block BIRCH_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
+		public static final Block JUNGLE_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
+		public static final Block ACACIA_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
+		public static final Block DARK_OAK_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
+		public static final Block CRIMSON_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
+		public static final Block WARPED_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
+		public static final Block MANGROVE_BOOKSHELF = new Block(FabricBlockSettings.copyOf(BOOKSHELF));
 
 		// Nether Rocks/Soil
 		public static final Block BASALT_DUST = new FallingBlock(FabricBlockSettings.of(Material.SOIL).strength(0.5f, 0.5f).sounds(BlockSoundGroup.SAND));
@@ -77,15 +79,16 @@ public class RacExtras implements ModInitializer {
 	public static final class Items {
 
 		// Definitions
+		private static final FabricItemSettings buildingBlockItem = new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS);
 
 		// Bookshelves
-		public static final Item SPRUCE_BOOKSHELF_ITEM = new BlockItem(SPRUCE_BOOKSHELF, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
-		public static final Item BIRCH_BOOKSHELF_ITEM = new BlockItem(BIRCH_BOOKSHELF, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
-		public static final Item JUNGLE_BOOKSHELF_ITEM = new BlockItem(JUNGLE_BOOKSHELF, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
-		public static final Item ACACIA_BOOKSHELF_ITEM = new BlockItem(ACACIA_BOOKSHELF, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
-		public static final Item DARK_OAK_BOOKSHELF_ITEM = new BlockItem(DARK_OAK_BOOKSHELF, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
-		public static final Item CRIMSON_BOOKSHELF_ITEM = new BlockItem(CRIMSON_BOOKSHELF, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
-		public static final Item WARPED_BOOKSHELF_ITEM = new BlockItem(WARPED_BOOKSHELF, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+		public static final Item SPRUCE_BOOKSHELF_ITEM = new BlockItem(SPRUCE_BOOKSHELF, buildingBlockItem);
+		public static final Item BIRCH_BOOKSHELF_ITEM = new BlockItem(BIRCH_BOOKSHELF, buildingBlockItem);
+		public static final Item JUNGLE_BOOKSHELF_ITEM = new BlockItem(JUNGLE_BOOKSHELF, buildingBlockItem);
+		public static final Item ACACIA_BOOKSHELF_ITEM = new BlockItem(ACACIA_BOOKSHELF, buildingBlockItem);
+		public static final Item DARK_OAK_BOOKSHELF_ITEM = new BlockItem(DARK_OAK_BOOKSHELF, buildingBlockItem);
+		public static final Item CRIMSON_BOOKSHELF_ITEM = new BlockItem(CRIMSON_BOOKSHELF, buildingBlockItem);
+		public static final Item WARPED_BOOKSHELF_ITEM = new BlockItem(WARPED_BOOKSHELF, buildingBlockItem);
 
 		// Nether Rocks/Soil
 		public static final Item BASALT_DUST_ITEM = new BlockItem(BASALT_DUST, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
