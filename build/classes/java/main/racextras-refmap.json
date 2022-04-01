@@ -1,0 +1,20 @@
+{
+  "mappings": {
+    "net/fakerac/racextras/mixin/ExampleMixin": {
+      "init()V": "Lnet/minecraft/class_442;method_25426()V"
+    },
+    "net/fakerac/racextras/mixin/BookshelfMixin": {
+      "canAccessBookshelf": "Lnet/minecraft/class_2331;method_40445(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2338;)Z"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/fakerac/racextras/mixin/ExampleMixin": {
+        "init()V": "Lnet/minecraft/class_442;method_25426()V"
+      },
+      "net/fakerac/racextras/mixin/BookshelfMixin": {
+        "canAccessBookshelf": "Lnet/minecraft/class_2331;method_40445(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2338;)Z"
+      }
+    }
+  }
+}
