@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+
 // I'm fully aware this is a HORRIBLE way of doing it and there could be a cleaner way of injecting to allow custom bookshelf functionality, I'll get to it eventually.
 // TODO: Fix spaghetti code and spam of ||, see how this can be improved, perhaps via tags or inheritance
 
@@ -18,13 +19,13 @@ public class BookshelfMixin {
     @Inject(at = @At("RETURN"), method = "canAccessBookshelf", cancellable = true)
     private static void canAccessBookshelf(World world, BlockPos tablePos, BlockPos bookshelfOffset, CallbackInfoReturnable<Boolean> cir) {
        cir.setReturnValue(world.getBlockState(tablePos.add(bookshelfOffset)).isOf(Blocks.BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.SPRUCE_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.BIRCH_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.JUNGLE_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.CRIMSON_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.DARK_OAK_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.ACACIA_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.WARPED_BOOKSHELF)
+               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.SPRUCE_BOOKSHELF)
+               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.BIRCH_BOOKSHELF)
+               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.JUNGLE_BOOKSHELF)
+               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.CRIMSON_BOOKSHELF)
+               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.DARK_OAK_BOOKSHELF)
+               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.ACACIA_BOOKSHELF)
+               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.WARPED_BOOKSHELF)
                && world.isAir(tablePos.add(bookshelfOffset.getX() / 2, bookshelfOffset.getY(), bookshelfOffset.getZ() / 2)));
     }
 }

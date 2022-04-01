@@ -6,5 +6,6 @@ public class ClientRE implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
     }
 }
