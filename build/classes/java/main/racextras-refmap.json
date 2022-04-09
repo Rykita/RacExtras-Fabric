@@ -1,7 +1,7 @@
 {
   "mappings": {
-    "net/fakerac/racextras/mixin/ExampleMixin": {
-      "init()V": "Lnet/minecraft/class_442;method_25426()V"
+    "net/fakerac/racextras/mixin/TreeMixin": {
+      "Lnet/minecraft/world/gen/stateprovider/BlockStateProvider;of(Lnet/minecraft/block/Block;)Lnet/minecraft/world/gen/stateprovider/SimpleBlockStateProvider;": "Lnet/minecraft/class_4651;method_38432(Lnet/minecraft/class_2248;)Lnet/minecraft/class_4656;"
     },
     "net/fakerac/racextras/mixin/BookshelfMixin": {
       "canAccessBookshelf": "Lnet/minecraft/class_2331;method_40445(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2338;)Z"
@@ -9,8 +9,8 @@
   },
   "data": {
     "named:intermediary": {
-      "net/fakerac/racextras/mixin/ExampleMixin": {
-        "init()V": "Lnet/minecraft/class_442;method_25426()V"
+      "net/fakerac/racextras/mixin/TreeMixin": {
+        "Lnet/minecraft/world/gen/stateprovider/BlockStateProvider;of(Lnet/minecraft/block/Block;)Lnet/minecraft/world/gen/stateprovider/SimpleBlockStateProvider;": "Lnet/minecraft/class_4651;method_38432(Lnet/minecraft/class_2248;)Lnet/minecraft/class_4656;"
       },
       "net/fakerac/racextras/mixin/BookshelfMixin": {
         "canAccessBookshelf": "Lnet/minecraft/class_2331;method_40445(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;Lnet/minecraft/class_2338;)Z"

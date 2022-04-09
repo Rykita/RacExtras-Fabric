@@ -3,29 +3,22 @@ package net.fakerac.racextras.mixin;
 import net.fakerac.racextras.RacExtras;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.EnchantingTableBlock;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-
-// I'm fully aware this is a HORRIBLE way of doing it and there could be a cleaner way of injecting to allow custom bookshelf functionality, I'll get to it eventually.
-// TODO: Fix spaghetti code and spam of ||, see how this can be improved, perhaps via tags or inheritance
-
 @Mixin(EnchantingTableBlock.class)
 public class BookshelfMixin {
     @Inject(at = @At("RETURN"), method = "canAccessBookshelf", cancellable = true)
     private static void canAccessBookshelf(World world, BlockPos tablePos, BlockPos bookshelfOffset, CallbackInfoReturnable<Boolean> cir) {
-       cir.setReturnValue(world.getBlockState(tablePos.add(bookshelfOffset)).isOf(Blocks.BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.SPRUCE_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.BIRCH_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.JUNGLE_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.CRIMSON_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.DARK_OAK_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.ACACIA_BOOKSHELF)
-               || world.getBlockState(tablePos.add(bookshelfOffset)).isOf(RacExtras.Blocks.WARPED_BOOKSHELF)
+       cir.setReturnValue(
+               world.getBlockState(tablePos.add(bookshelfOffset)).isIn(TagKey.of(Registry.BLOCK_KEY, new Identifier("c", "bookshelves")))
                && world.isAir(tablePos.add(bookshelfOffset.getX() / 2, bookshelfOffset.getY(), bookshelfOffset.getZ() / 2)));
     }
 }

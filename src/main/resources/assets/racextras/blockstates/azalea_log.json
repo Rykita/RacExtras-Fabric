@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y":  { "model": "racextras:block/azalea_log" },
+    "axis=z":   { "model": "racextras:block/azalea_log", "x": 90 },
+    "axis=x":   { "model": "racextras:block/azalea_log", "x": 90, "y": 90 },
+    "axis=none": { "model": "racextras:block/azalea_log" }
+  }
+}

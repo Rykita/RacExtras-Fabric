@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "racextras:spruce_bookshelf",
+    "racextras:birch_bookshelf",
+    "racextras:jungle_bookshelf",
+    "racextras:acacia_bookshelf",
+    "racextras:dark_oak_bookshelf",
+    "racextras:crimson_bookshelf",
+    "racextras:warped_bookshelf"
+  ]
+}

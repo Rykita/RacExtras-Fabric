@@ -6,6 +6,10 @@
   "block.racextras.dark_oak_bookshelf": "Dark Oak Bookshelf",
   "block.racextras.crimson_bookshelf": "Crimson Bookshelf",
   "block.racextras.warped_bookshelf": "Warped Bookshelf",
+  "block.racextras.azalea_bookshelf": "Azalea Bookshelf",
   "block.racextras.mangrove_bookshelf": "Mangrove Bookshelf",
-  "block.racextras.basalt_dust": "Basalt Dust"
+  "block.racextras.basalt_dust": "Basalt Dust",
+  "block.racextras.deepslate_furnace": "Deepslate Furnace",
+  "block.racextras.azalea_log": "Azalea Log",
+  "block.racextras.azalea_planks": "Azalea Planks"
 }

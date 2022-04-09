@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "racextras:block/azalea/azalea_planks",
+    "side": "racextras:block/azalea/azalea_bookshelf"
+  }
+}

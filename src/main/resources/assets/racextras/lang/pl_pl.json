@@ -1,10 +1,12 @@
 {
   "block.racextras.spruce_bookshelf": "Świerkowa biblioteczka",
-  "block.racextras.birch_bookshelf": "Brzozowa blblioteczka",
+  "block.racextras.birch_bookshelf": "Brzozowa biblioteczka",
   "block.racextras.jungle_bookshelf": "Tropikalna biblioteczka",
   "block.racextras.acacia_bookshelf": "Akacjowa biblioteczka",
   "block.racextras.dark_oak_bookshelf": "Ciemnodębowa biblioteczka",
   "block.racextras.crimson_bookshelf": "Szkarłatna biblioteczka",
   "block.racextras.warped_bookshelf": "Spaczona biblioteczka",
-  "block.racextras.mangrove_bookshelf": "Mangrove Bookshelf"
+  "block.racextras.basalt_dust": "Sproszkowany bazalt",
+  "block.racextras.mangrove_bookshelf": "Mangrove Bookshelf",
+  "block.racextras.deepslate_furnace": "Łupkowy piec"
 }
